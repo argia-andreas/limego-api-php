@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Grafstorm\LimeGoApi\Tests;
 
 use PHPUnit\Framework\TestCase;
 

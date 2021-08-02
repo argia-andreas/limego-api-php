@@ -1,16 +1,16 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "grafstorm/limego-api-php",
+    "description": "LimeGo API Wrapper",
     "keywords": [
-        ":vendor_name",
-        "package_slug"
+        "grafstorm",
+        "limego-api-php"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/grafstorm/limego-api-php",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "grafi",
+            "email": "andreas@grafstrom.io",
             "role": "Developer"
         }
     ],
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Grafstorm\\LimeGoApi\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Grafstorm\\LimeGoApi\\Tests\\": "tests"
         }
     },
     "scripts": {
