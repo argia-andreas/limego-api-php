@@ -15,10 +15,10 @@ class LimeGo
             'base_uri' => 'https://api.lime-go.com/v1/',
             'headers' => [
                 'Authorization' => 'go-api:' . $this->apiKey . '',
-                'Content-Type' => 'application/json'
+                'Content-Type' => 'application/json',
             ],
             // You can set any number of default request options.
-            'timeout'  => 15.0,
+            'timeout' => 15.0,
         ]);
     }
 

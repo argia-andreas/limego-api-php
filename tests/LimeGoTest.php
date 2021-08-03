@@ -1,18 +1,17 @@
 <?php
-use Grafstorm\LimeGoApi\LimeGo;
+
 use Grafstorm\LimeGoApi\SignalRequest;
 
-it('returns a signal request', function() {
-
+it('returns a signal request', function () {
     $signal = new \Grafstorm\LimeGoApi\Signal(new \GuzzleHttp\Client());
     $signal->name('::test::')
         ->strength(11)
         ->note('::note::')
-        ->organisation(function(\Grafstorm\LimeGoApi\Organisation $organisation) {
+        ->organisation(function (\Grafstorm\LimeGoApi\Organisation $organisation) {
             $organisation->registrationNumber('::reg-nr::');
         });
 
-    $request =  SignalRequest::create($signal);
+    $request = SignalRequest::create($signal);
     $requestBody = json_decode((string) $request->getBody(), true);
 
     expect($request)->toBeInstanceOf(\GuzzleHttp\Psr7\Request::class);

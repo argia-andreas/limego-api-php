@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Grafstorm\LimeGoApi;
-
 
 class Organisation
 {
@@ -30,7 +28,7 @@ class Organisation
         $organisation = [
             'registrationNumber' => $this->registrationNumber,
             'vatNumber' => $this->vatNumber,
-            'name' => $this->name
+            'name' => $this->name,
         ];
 
         // Only keep non-empty values by using array_filter

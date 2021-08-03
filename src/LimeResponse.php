@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Grafstorm\LimeGoApi;
-
 
 use GuzzleHttp\Psr7\Response;
 

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Grafstorm\LimeGoApi;
-
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
@@ -20,21 +18,24 @@ class Signal
         $this->client = $client;
     }
 
-    function name(string $name): self
+    public function name(string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
 
-    function strength(int $strength = 50): self
+    public function strength(int $strength = 50): self
     {
         $this->strength = $strength;
+
         return $this;
     }
 
-    function note(string $note): self
+    public function note(string $note): self
     {
         $this->note = $note;
+
         return $this;
     }
 
@@ -48,16 +49,16 @@ class Signal
 
     public function withOrganisation()
     {
-
     }
 
     /**
      * @throws \Exception
      */
-    function send(): LimeResponse
+    public function send(): LimeResponse
     {
         try {
             $response = $this->client->send(SignalRequest::create($this));
+
             return LimeResponse::fromResponse($response);
         } catch (GuzzleException $e) {
             throw new \Exception('Guzzle is not happy...');

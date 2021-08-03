@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Grafstorm\LimeGoApi;
-
 
 use GuzzleHttp\Psr7\Request;
 
@@ -13,7 +11,7 @@ class SignalRequest
         $body = [
             'name' => $signal->name,
             'strength' => $signal->strength,
-            'note' => $signal->note
+            'note' => $signal->note,
         ];
 
         if ($signal->organisation ?? null) {
